@@ -36,7 +36,7 @@ export async function POST(request:NextRequest, {params}:{params:Promise<{ teamI
         }
 
         if(currentUserMembership.role!=="OWNER" && currentUserMembership.role!=="ADMIN"){
-            return NextResponse.json({error:"ONly Owner and Admin can add members"},{status:403})
+            return NextResponse.json({error:"Only Owner and Admin can add members"},{status:403})
         }
 
         const body = await request.json();
